@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-origin: border-box;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #dadada;
+}
+
+html, body {
+    background-color: #131313;
+}
+
+main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: 'Inter', sans-serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+h2 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 10%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    opacity: 0.8;
+}
+
+h2 .works {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+ul {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    width: 80%;
+    height: 60%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    counter-reset: menucounter;
+}
+
+ul li {
+    position: relative;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.182); */
+    cursor: none;
+    transition: 1s;
+}
+
+ul li::before {
+    counter-increment: menucounter;
+    content: counters(menucounter, "", decimal-leading-zero);
+    position: absolute;
+    left: -15px;
+    top: 0;
+    font-size: 10px;
+}
+
+ul li:hover {
+    color: rgb(255, 123, 0) !important;
+}
+
+p {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 8px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
